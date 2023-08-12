@@ -1,5 +1,5 @@
 .accordionContainer {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,7 @@
 }
 
 .accordionHeading {
-    width: 100%;
+    width: 95%;
     border-bottom: 1px solid gray;
     margin-bottom: 50px;
 }

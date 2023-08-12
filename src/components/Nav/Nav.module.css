@@ -58,3 +58,10 @@
     width: 100%;
     height: 100%;
 }
+
+@media only screen and (max-height: 580px) {
+    .phoneButton{
+        height: 80%;
+        width: 130px;
+    }
+}

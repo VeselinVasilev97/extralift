@@ -26,8 +26,8 @@
 }
 
 .imageStyle {
-    width: 20%;
-    height: 250px;
+    width: 33.33%;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -37,7 +37,8 @@
     }
 
     .imageStyle {
-        width: 33.33%;
-        height: 130px;
+        width: 50%;
+        height: 250px;
     }
 }
+

@@ -15,12 +15,11 @@ export default function BasicAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>Сам ли ще я управлявам?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Отговорът е НЕ, в цената е включено и управление от специалист.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -30,7 +29,7 @@ export default function BasicAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Какво ще стане ако се развали?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -39,7 +38,7 @@ export default function BasicAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      {/* <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"
@@ -47,7 +46,7 @@ export default function BasicAccordion() {
         >
           <Typography>Disabled Accordion</Typography>
         </AccordionSummary>
-      </Accordion>
+      </Accordion> */}
     </div>
   );
 }
