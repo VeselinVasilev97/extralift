@@ -23,3 +23,13 @@
     height: 250px;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 480px) {
+    .centeredDiv{
+        width: 100%;
+    }
+    .imageStyle{
+    width:33.33%;
+    height: 130px;
+    }
+  }
