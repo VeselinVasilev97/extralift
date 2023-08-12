@@ -11,6 +11,8 @@ import image5 from "./assets/img6.jpg";
 // import image7 from "./assets/first.jpg";
 import image8 from "./assets/img8.jpg";
 import image9 from "./assets/img9.jpg";
+import InfoComponent from "./components/Info/InfoComponent";
+// import BasicAccordion from './components/Accordion/Accordion';
 // import image10 from "./assets/first.jpg";
 // import image11 from "./assets/first.jpg";
 import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
@@ -21,6 +23,11 @@ function App() {
         <Nav />
         <div className={classes.row}>
           <Header />
+        </div>
+        <div style={{padding:'100px 0px'}} className={classes.row}>
+          <InfoComponent props={1}/>
+        </div>
+        <div className={classes.row}>
         </div>
         <div className={classes.row}>
           <div className={classes.centeredDiv}>
@@ -58,6 +65,7 @@ function App() {
         <div className={classes.row}>
           <AccordionSection />
         </div>
+
       </div>
     </>
   );

@@ -5,7 +5,7 @@ const Nav = () => {
     const [nav, setNav] = useState(false)
 
     const activateNav = () => {
-        if (window.scrollY <= 50) {
+        if (window.scrollY <= 1) {
             setNav(false)
         } else {
             setNav(true)
@@ -13,14 +13,13 @@ const Nav = () => {
     }
     window.addEventListener('scroll', activateNav);
     return (
-        <div className={nav ? classes.NavMainDivActive : classes.NavMainDiv}>
+        <div className={classes.sticky}>
+            <div className={nav ? classes.NavMainDivActive : classes.NavMainDiv}>
                 <div className={classes.logoDiv} />
-
                 <div className={classes.phoneButton}>
-                    
                     <a className={classes.phoneText} href="tel:+359878018282">0878018282</a>
                 </div>
-
+            </div>
         </div>
     )
 }
