@@ -1,7 +1,7 @@
 import classes from './InfoComponent.module.css'
 import imageInfo1 from '../../assets/acv1.jpg'
 import imageInfo2 from '../../assets/avv8.jpg'
-import imageInfo3 from '../../assets/acv1.jpg'
+import imageInfo3 from '../../assets/nv2.jpg'
 import imageInfo4 from '../../assets/acv1.jpg'
 const InfoComponent = (compNum) => {
     if (compNum.props === 1) {
@@ -38,7 +38,7 @@ const InfoComponent = (compNum) => {
         return (
             <div className={classes.mainInfoDiv}>
                 <div className={classes.imageFrame}>
-                    <img src={imageInfo1} className={classes.imageStyleInfoLeft} />
+                    <img src={imageInfo3} className={classes.imageStyleInfoLeft} />
                 </div>
                 <div className={classes.infoTextDiv}>
                     <h5 className={classes.headerTextStyle}>Ножична вишка</h5>

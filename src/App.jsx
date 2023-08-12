@@ -7,15 +7,14 @@ import image2 from "./assets/first.jpg";
 import image3 from "./assets/img3.jpg";
 import image4 from "./assets/img5.jpg";
 import image5 from "./assets/img6.jpg";
-// import image6 from "./assets/first.jpg";
-// import image7 from "./assets/first.jpg";
 import image8 from "./assets/img8.jpg";
-import image9 from "./assets/img9.jpg";
+import image9 from "./assets/nv4.jpg";
 import InfoComponent from "./components/Info/InfoComponent";
-// import BasicAccordion from './components/Accordion/Accordion';
-// import image10 from "./assets/first.jpg";
-// import image11 from "./assets/first.jpg";
 import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
+import Footer from "./components/Footer/Footer";
+
+
+
 function App() {
   return (
     <>
@@ -24,13 +23,13 @@ function App() {
         <div className={classes.row}>
           <Header />
         </div>
-        <div style={{paddingTop:'100px'}} className={classes.row}>
+        <div style={{paddingTop:'10px'}} className={classes.row}>
           <InfoComponent props={1}/>
         </div>
-        <div style={{paddingTop:'100px'}} className={classes.row}>
+        <div style={{paddingTop:'10px'}} className={classes.row}>
           <InfoComponent props={2}/>
         </div>
-        <div style={{paddingTop:'100px',paddingBottom:'100px'}} className={classes.row}>
+        <div style={{paddingTop:'10px'}} className={classes.row}>
           <InfoComponent props={3}/>
         </div>
         <div className={classes.row}>
@@ -71,8 +70,9 @@ function App() {
             </Fancybox>
           </div>
         </div>
-        
-
+        <div className={classes.row}>
+          <Footer />
+        </div>
       </div>
     </>
   );

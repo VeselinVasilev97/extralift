@@ -5,7 +5,7 @@ const Nav = () => {
     const [nav, setNav] = useState(false)
 
     const activateNav = () => {
-        if (window.scrollY <= 1) {
+        if (window.scrollY <= 2) {
             setNav(false)
         } else {
             setNav(true)
