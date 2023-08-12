@@ -36,6 +36,9 @@ function App() {
         <div className={classes.row}>
         </div>
         <div className={classes.row}>
+          <AccordionSection />
+        </div>
+        <div className={classes.row}>
           <div className={classes.centeredDiv}>
             <Fancybox
               options={{
@@ -68,9 +71,7 @@ function App() {
             </Fancybox>
           </div>
         </div>
-        <div className={classes.row}>
-          <AccordionSection />
-        </div>
+        
 
       </div>
     </>
