@@ -39,7 +39,7 @@ export default function BasicAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion disabled>
+      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"

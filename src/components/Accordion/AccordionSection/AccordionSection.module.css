@@ -1,6 +1,19 @@
 .accordionContainer {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: red;
+  background-color: #a70f10;
+  padding: 10rem 5rem;
 }
+
+.accordionHeading {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    margin-bottom: 50px;
+}
+
+.accordionHeading h1 {
+    padding-bottom: 20px;
+}
+

@@ -5,6 +5,9 @@ import Accordion from "../Accordion";
 const AccordionSection = () => {
   return (
     <div className={classes.accordionContainer}>
+      <div className={classes.accordionHeading}>
+        <h1>Често задавани въпроси</h1>
+      </div>
       <Accordion />
     </div>
   );
