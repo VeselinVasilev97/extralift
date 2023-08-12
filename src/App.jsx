@@ -13,7 +13,7 @@ import image8 from "./assets/img8.jpg";
 import image9 from "./assets/img9.jpg";
 // import image10 from "./assets/first.jpg";
 // import image11 from "./assets/first.jpg";
-
+import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
 function App() {
   return (
     <>
@@ -24,7 +24,6 @@ function App() {
         </div>
         <div className={classes.row}>
           <div className={classes.centeredDiv}>
-
             <Fancybox
               options={{
                 Carousel: {
@@ -55,7 +54,9 @@ function App() {
               </a>
             </Fancybox>
           </div>
-
+        </div>
+        <div className={classes.row}>
+          <AccordionSection />
         </div>
       </div>
     </>
