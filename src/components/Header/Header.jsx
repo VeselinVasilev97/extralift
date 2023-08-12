@@ -6,8 +6,14 @@ const Header = () => {
     <div className={classes.header}>
       <h1 className={classes.heading}>Автовишки под наем</h1>
       <h2 className={classes.subheading}>Extralift</h2>
-      <p>Обслужваме цял Добрич без почивен ден</p>
-      <button className={classes.button}><span>+359 898 58 7030</span></button>
+      <p className={classes.description}>
+        Обслужваме цял Добрич без почивен ден
+      </p>
+      <div className={classes.phoneButton}>
+        <a className={classes.phoneText} href="tel:+359878018282">
+          0878018282
+        </a>
+      </div>
     </div>
   );
 };
