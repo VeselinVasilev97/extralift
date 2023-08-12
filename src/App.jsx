@@ -24,8 +24,14 @@ function App() {
         <div className={classes.row}>
           <Header />
         </div>
-        <div style={{padding:'100px 0px'}} className={classes.row}>
+        <div style={{paddingTop:'100px'}} className={classes.row}>
           <InfoComponent props={1}/>
+        </div>
+        <div style={{paddingTop:'100px'}} className={classes.row}>
+          <InfoComponent props={2}/>
+        </div>
+        <div style={{paddingTop:'100px',paddingBottom:'100px'}} className={classes.row}>
+          <InfoComponent props={3}/>
         </div>
         <div className={classes.row}>
         </div>
