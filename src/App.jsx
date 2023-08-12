@@ -7,8 +7,7 @@ function App() {
     <>
       <div className={classes.architecture}>
         <Nav />
-        <Nav />
-
+        
       </div>
     </>
   )
