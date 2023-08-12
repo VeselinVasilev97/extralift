@@ -10,5 +10,16 @@
     flex-direction: column;
 }
 .row{
-    width:100%
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centeredDiv{
+    width:80%;
+}
+.imageStyle{
+    width:20%;
+    height: 250px;
+    object-fit: cover;
 }
