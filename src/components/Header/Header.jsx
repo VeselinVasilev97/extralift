@@ -7,7 +7,7 @@ const Header = () => {
       <h1 className={classes.heading}>Автовишки под наем</h1>
       <h2 className={classes.subheading}>Extralift</h2>
       <p className={classes.description}>
-        Обслужваме цял Добрич без почивен ден!
+        Обслужваме цял Добрич без почивен ден
       </p>
       <div className={classes.phoneButton}>
         <a className={classes.phoneText} href="tel:+359878018282">
