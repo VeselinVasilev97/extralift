@@ -19,7 +19,7 @@ const AccordionSection = (props) => {
       <div className={classes.accordionHeading}>
         <h1 style={{ color:'#a70f10'}}>{text[lang][0].faq}</h1>
       </div>
-      <Accordion />
+      <Accordion language={lang} />
     </div>
   );
 };

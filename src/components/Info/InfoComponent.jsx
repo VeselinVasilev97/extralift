@@ -23,7 +23,7 @@ const InfoComponent = (compNum) => {
                     <img src={imageInfo1} className={classes.imageStyleInfo} />
                 </div>
                 <div className={classes.infoTextDiv}>
-                    <h5 className={classes.headerTextStyle}>Артикулираща вишка <span style={{ fontWeight: 'bold' }}>JLG 45</span></h5>
+                    <h5 className={classes.headerTextStyle}>{text[lang][0].boomLift} <span style={{ fontWeight: 'bold' }}>JLG 45</span></h5>
 
                     <div className={classes.divHalfsHolder}>
                         <div className={classes.divHalf}>
@@ -128,7 +128,7 @@ const InfoComponent = (compNum) => {
                     <img src={imageInfo2} className={classes.imageStyleInfo} />
                 </div>
                 <div className={classes.infoTextDiv}>
-                    <h5 className={classes.headerTextStyle}>Автовишка</h5>
+                    <h5 className={classes.headerTextStyle}>{text[lang][0].autoLift}</h5>
 
                     <div className={classes.divHalfsHolder}>
                         <div className={classes.divHalf}>
@@ -158,26 +158,26 @@ const InfoComponent = (compNum) => {
                         </div>
                         <div style={{ textAlign: "left" }} className={classes.divHalf}>
                             <p className={classes.headerPtagStyled}>
-                                15.7м
+                                15.7 м.
                             </p>
 
                             <p className={classes.headerPtagStyled}>
-                                6.91м
+                                6.91 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                230кг
+                                230 кг.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                1.83 х 0.91м
+                                1.83 х 0.91 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                1.80м
+                                1.80 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                2.20м
+                                2.20 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                5.80м
+                                5.80 м.
                             </p>
                         </div>
                     </div>
@@ -203,7 +203,7 @@ const InfoComponent = (compNum) => {
                     <img src={imageInfo3} className={classes.imageStyleInfo} />
                 </div>
                 <div className={classes.infoTextDiv}>
-                    <h5 className={classes.headerTextStyle}>Ножична вишка<br></br>HOULOTTE COMPACT 12</h5>
+                    <h5 className={classes.headerTextStyle}>{text[lang][0].scissorsLift}<br></br>HOULOTTE COMPACT 12</h5>
 
                     <div className={classes.divHalfsHolder}>
                         <div className={classes.divHalf}>
@@ -237,16 +237,16 @@ const InfoComponent = (compNum) => {
                         </div>
                         <div style={{ textAlign: "left" }} className={classes.divHalf}>
                             <p className={classes.headerPtagStyled}>
-                                12м
+                                12 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                300кг
+                                300 кг.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                1.17м х 2.40м
+                                1.17м х 2.40 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                0.92м
+                                0.92 м.
                             </p>
                             <p className={classes.headerPtagStyled}>
 

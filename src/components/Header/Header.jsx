@@ -20,7 +20,6 @@ const Header = (props) => {
       <h1 className={classes.heading}>{text[lang][0].rentAliftCar}</h1>
       <h2 className={classes.subheading}>Extralift</h2>
       <p className={classes.description}>
-        
         {text[lang][0].varnaAndDobrich}
       </p>
       <div className={classes.phoneButton}>

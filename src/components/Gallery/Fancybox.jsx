@@ -6,6 +6,7 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 function Fancybox(props) {
   const containerRef = useRef(null);
 
+
   useEffect(() => {
     const container = containerRef.current;
 

@@ -63,9 +63,9 @@
     width: 100%;
 }
 .longText{
-    width: 100%;
     font-size: 15px;
     text-align: center;
+    padding: 0px 20px;
 }
 
 .divHalf {
@@ -131,5 +131,18 @@
     }
     .longText{
         font-size: 10px;
+        padding: 0px 20px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .priceText{
+        font-size: 12px;
+    }
+    .mainInfoDiv{
+        display: flex;
+        align-items: center;
+    }
+    .headerPtagStyle{
+        font-size: 13px;
     }
 }

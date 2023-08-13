@@ -12,13 +12,26 @@ import image9 from "./assets/nv4.jpg";
 import InfoComponent from "./components/Info/InfoComponent";
 import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
 import Footer from "./components/Footer/Footer";
-import { useState } from "react";
+import { useEffect, useState } from 'react'
+import text from "./components/textLanguages/Language";
+
 
 
 
 function App() {
   const [switchOnOff,setSwitchOnOff] = useState(true);
     const [langFlag, setLangFlag] = useState(true)
+    const [lang, setLang] = useState('БГ');
+
+
+    
+  useEffect(() => {
+    if (langFlag) {
+        setLang('БГ')
+    } else {
+        setLang('EN')
+    }
+}, [langFlag])
     return (
     <>
     {switchOnOff ? <div className={classes.architecture}>
@@ -40,7 +53,7 @@ function App() {
         </div>
         <div style={{marginTop:'100px'}} className={classes.row}>
           <div className={classes.centeredDiv}>
-          <h1 style={{fontWeight:"300",textAlign:"center",height:'100px'}}>Галерия</h1>
+          <h1 style={{fontWeight:"300",textAlign:"center",height:'100px'}}>{text[lang][0].gellery}</h1>
             <Fancybox
             languageProp={langFlag}
               options={{

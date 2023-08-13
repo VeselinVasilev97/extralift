@@ -5,8 +5,8 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-export default function BasicAccordion() {
+import text from "../textLanguages/Language";
+export default function BasicAccordion(props) {
   return (
     <div className={classes.accordion}>
       <Accordion>
@@ -15,7 +15,7 @@ export default function BasicAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Сам ли ще управлявам вишката?</Typography>
+          <Typography>{text[props.language][0].faq1}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -30,12 +30,12 @@ export default function BasicAccordion() {
           id="panel2a-header"
         >
           <Typography>
-            Доставка до обект
+          {text[props.language][0].faq2}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Разполагаме със собствен транспорт за доставка на машините, транспортът не е включен в цената, при желание и възможност на клиента, той сам може да организира транспорта на машината.
+            {text[props.language][0].faq2Answer}
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -46,20 +46,20 @@ export default function BasicAccordion() {
           id="panel2a-header"
         >
           <Typography>
-            За какво може да бъде използвана автовишка ?
+          {text[props.language][0].faq3}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ul style={{ padding: '0px 20px' }}>
-            <li>почистване на стъкла</li>
-            <li>кастрене и рязане на клони</li>
-            <li>ремонт и почистване на фасади</li>
-            <li>монтаж и демонтаж да климатици</li>
-            <li>изграждане и поддръжка на освтление</li>
-            <li>ел. услуги</li>
-            <li>монтаж и демонтаж да улуци</li>
-            <li>изграждане на рекламни билборди</li>
-            <li>изграждане на изолации</li>
+            <li>{text[props.language][0].option1}</li>
+            <li>{text[props.language][0].option2}</li>
+            <li>{text[props.language][0].option3}</li>
+            <li>{text[props.language][0].option4}</li>
+            <li>{text[props.language][0].option5}</li>
+            <li>{text[props.language][0].option6}</li>
+            <li>{text[props.language][0].option7}</li>
+            <li>{text[props.language][0].option8}</li>
+            <li>{text[props.language][0].option9}</li>
           </ul>
         </AccordionDetails>
       </Accordion>
@@ -70,7 +70,7 @@ export default function BasicAccordion() {
           id="panel2a-header"
         >
           <Typography>
-            Кога трябва да използваме електрическа ножична вишка?
+          {text[props.language][0].faq4}
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
