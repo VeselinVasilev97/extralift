@@ -4,9 +4,16 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0);
   height: 85vh;
   user-select: none;
+  background-image: url('../../assets/Background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body{
+  background-image: url('../../assets/Background.png');
 }
 
 .heading {
@@ -41,9 +48,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .header {
-    height: 60vh;
-  }
+
 
   .heading {
     font-size: 2rem;

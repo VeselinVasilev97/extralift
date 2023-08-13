@@ -12,33 +12,34 @@ import image9 from "./assets/nv4.jpg";
 import InfoComponent from "./components/Info/InfoComponent";
 import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
 import Footer from "./components/Footer/Footer";
+import { useState } from "react";
 
 
 
 function App() {
+  const [switchOnOff,setSwitchOnOff] = useState(false);
   return (
     <>
-      <div className={classes.architecture}>
+    {switchOnOff ? <div className={classes.architecture}>
         <Nav />
         <div className={classes.row}>
           <Header />
         </div>
-        <div style={{paddingTop:'10px'}} className={classes.row}>
+        <div className={classes.row}>
           <InfoComponent props={1}/>
         </div>
-        <div style={{paddingTop:'10px'}} className={classes.row}>
+        <div  style={{marginTop:'100px'}} className={classes.row}>
           <InfoComponent props={2}/>
         </div>
-        <div style={{paddingTop:'10px'}} className={classes.row}>
+        <div  style={{marginTop:'100px'}} className={classes.row}>
           <InfoComponent props={3}/>
         </div>
-        <div className={classes.row}>
-        </div>
-        <div className={classes.row}>
+        <div style={{marginTop:'100px'}} className={classes.row}>
           <AccordionSection />
         </div>
-        <div className={classes.row}>
+        <div style={{marginTop:'100px'}} className={classes.row}>
           <div className={classes.centeredDiv}>
+          <h1 style={{fontWeight:"300",textAlign:"center",height:'100px'}}>Галерия</h1>
             <Fancybox
               options={{
                 Carousel: {
@@ -70,10 +71,16 @@ function App() {
             </Fancybox>
           </div>
         </div>
-        <div className={classes.row}>
+        <div style={{marginTop:'100px'}} className={classes.row}>
           <Footer />
         </div>
       </div>
+      :
+      <div className={classes.maintenance}>
+      <p>WEBSITE IS UNDER MAINTENANCE</p>
+      </div>
+      }
+      
     </>
   );
 }

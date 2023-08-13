@@ -1,33 +1,28 @@
 .mainInfoDiv {
     width: 100%;
-    height: 500px;
     background-color: #ffffff;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .imageFrame {
     height: 100%;
-    width: 35%;
-    background-color: red;
+    width: 45%;
     border-radius: 10px;
 }
 
-.imageStyleInfoLeft {
+.imageStyleInfo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 50px;
 }
-.imageStyleInfoRight {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px 0px 0px 10px;
-}
+
 
 .infoTextDiv {
     width: 50%;
+    display: flex;
+    flex-direction: column;
     /* background-color: rgb(235, 235, 235); */
 }
 
@@ -35,32 +30,106 @@
     font-size: 30px;
     font-weight: 300;
     padding: 15px;
+    text-align: center;
 }
 
 .headerPtagStyle {
-    font-size: 13px;
-    padding: 15px;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.headerPtagStyled {
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #a70f10;
+    font-weight: bold;
+}
+
+.divHalfsHolder {
+    width: 100%;
+    display: flex;
+    border-top:1px solid rgb(231, 231, 231)
+}
+
+.divPrices {
+    width: 100%;
+}
+.longText{
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+}
+
+.divHalf {
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 5px;
+}
+
+.priceText {
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: right;
+}
+
+.priceTextRight {
+    height: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    color:rgb(37, 37, 37);
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 480px) {
     .imageFrame {
-        width: 40%;
+        width: 100%;
+    }
+
+    .imageStyleInfo {
+        border-radius: 0;
     }
 
     .infoTextDiv {
-        width: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* background-color: red; */
     }
 
     .headerTextStyle {
         text-align: center;
-        font-size: 20px;
+        font-size: 25px;
+        height: 15%;
     }
 
     .headerPtagStyle {
-        text-align: center;
+        font-size: 13px;
+        line-height: 12px;
     }
 
     .mainInfoDiv {
-        height: 300px;
+        flex-direction: column;
+    }
+
+    .priceText,
+    .priceTextRight {
+        font-size: 13px;
+    }
+    .longText{
+        font-size: 10px;
     }
 }

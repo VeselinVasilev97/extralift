@@ -7,7 +7,7 @@ const AccordionSection = () => {
   return (
     <div className={classes.accordionContainer}>
       <div className={classes.accordionHeading}>
-        <h1 style={{ color:'#a70f10'}}>Често задавани въпроси</h1>
+        <h1 style={{ color:'#a70f10'}}>Полезна информация</h1>
       </div>
       <Accordion />
     </div>
