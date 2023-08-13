@@ -1,13 +1,27 @@
 import React from "react";
 import classes from "./Header.module.css";
+import text from '../textLanguages/Language'
+import { useEffect, useState } from 'react'
 
-const Header = () => {
+const Header = (props) => {
+    const [lang, setLang] = useState('БГ');
+
+
+  useEffect(() => {
+    if (props.languageProp) {
+        setLang('БГ')
+    } else {
+        setLang('EN')
+    }
+}, [props.languageProp])
+
   return (
     <div className={classes.header}>
-      <h1 className={classes.heading}>Автовишки под наем</h1>
+      <h1 className={classes.heading}>{text[lang][0].rentAliftCar}</h1>
       <h2 className={classes.subheading}>Extralift</h2>
       <p className={classes.description}>
-        Обслужваме цял Добрич без почивен ден
+        
+        {text[lang][0].varnaAndDobrich}
       </p>
       <div className={classes.phoneButton}>
         <a className={classes.phoneText} href="tel:+359878018282">

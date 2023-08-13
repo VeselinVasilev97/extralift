@@ -17,30 +17,32 @@ import { useState } from "react";
 
 
 function App() {
-  const [switchOnOff,setSwitchOnOff] = useState(false);
-  return (
+  const [switchOnOff,setSwitchOnOff] = useState(true);
+    const [langFlag, setLangFlag] = useState(true)
+    return (
     <>
     {switchOnOff ? <div className={classes.architecture}>
-        <Nav />
+        <Nav changeLang={setLangFlag} />
         <div className={classes.row}>
-          <Header />
+          <Header languageProp={langFlag} />
         </div>
         <div className={classes.row}>
-          <InfoComponent props={1}/>
+          <InfoComponent languageProp={langFlag} props={1}/>
         </div>
         <div  style={{marginTop:'100px'}} className={classes.row}>
-          <InfoComponent props={2}/>
+          <InfoComponent languageProp={langFlag} props={2}/>
         </div>
         <div  style={{marginTop:'100px'}} className={classes.row}>
-          <InfoComponent props={3}/>
+          <InfoComponent languageProp={langFlag} props={3}/>
         </div>
         <div style={{marginTop:'100px'}} className={classes.row}>
-          <AccordionSection />
+          <AccordionSection languageProp={langFlag} />
         </div>
         <div style={{marginTop:'100px'}} className={classes.row}>
           <div className={classes.centeredDiv}>
           <h1 style={{fontWeight:"300",textAlign:"center",height:'100px'}}>Галерия</h1>
             <Fancybox
+            languageProp={langFlag}
               options={{
                 Carousel: {
                   infinite: true,
@@ -72,7 +74,7 @@ function App() {
           </div>
         </div>
         <div style={{marginTop:'100px'}} className={classes.row}>
-          <Footer />
+          <Footer languageProp={switchOnOff} />
         </div>
       </div>
       :

@@ -2,7 +2,20 @@ import classes from './InfoComponent.module.css'
 import imageInfo1 from '../../assets/acv1.jpg'
 import imageInfo2 from '../../assets/avv8.jpg'
 import imageInfo3 from '../../assets/nv3.jpg'
+import text from '../textLanguages/Language'
+import { useEffect, useState } from 'react'
+
 const InfoComponent = (compNum) => {
+    const [lang, setLang] = useState('БГ');
+
+    useEffect(() => {
+        if (compNum.languageProp) {
+            setLang('БГ')
+        } else {
+            setLang('EN')
+        }
+    }, [compNum.languageProp])
+
     if (compNum.props === 1) {
         return (
             <div className={classes.mainInfoDiv}>
@@ -14,33 +27,133 @@ const InfoComponent = (compNum) => {
 
                     <div className={classes.divHalfsHolder}>
                         <div className={classes.divHalf}>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][0].workHeight}
+                            </p>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][0].horizontalObseg}
+                            </p>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][0].weightMax}
+                            </p>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][0].platformSize}
+                            </p>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][0].width}
 
-                            <p className={classes.headerPtagStyle}>
-                                Работна височина:
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Хоризонтален обсег:
+                                {text[lang][0].height}
+
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Товароподемност:
+                                {text[lang][0].length}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Размери на платформата:
+                                {text[lang][0].speed}
+
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Ширина:
+                                {text[lang][0].weight}
+
+                            </p>
+                        </div>
+                        <div style={{ textAlign: "left" }} className={classes.divHalf}>
+                            <p className={classes.headerPtagStyled}>
+                                15.7 м.
+                            </p>
+
+                            <p className={classes.headerPtagStyled}>
+                                6.91 м.
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                230 кг.
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                1.83 х 0.91 м.
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                1.80 м.
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                2.20 м.
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                5.80 м.
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                6.37 км/ч
+                            </p>
+                            <p className={classes.headerPtagStyled}>
+                                5900 кг.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div className={classes.divHalfsHolder}>
+
+                        <div className={classes.divPrices}>
+                            <p className={classes.priceText}>
+                                {text[lang][0].pricePerDay}
+                            </p>
+                            <p className={classes.priceText}>
+                                {text[lang][0].pricePerWeekend}
+
+                            </p>
+                            <p className={classes.priceText}>
+                                {text[lang][0].pricePerDayPerWeek}
+
+                            </p>
+                            <p className={classes.priceText}>
+                                {text[lang][0].pricePerDayPerMonth}
+
+                            </p>
+                        </div>
+                        <div className={classes.divPrices}>
+                            <p className={classes.priceTextRight}> 100 лв.</p>
+                            <p className={classes.priceTextRight}> 150 лв.</p>
+                            <p className={classes.priceTextRight}> 90 лв.</p>
+                            <p className={classes.priceTextRight}> 70 лв.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        )
+    } else if (compNum.props === 2) {
+        return (
+            <div className={classes.mainInfoDiv}>
+                <div className={classes.imageFrame}>
+                    <img src={imageInfo2} className={classes.imageStyleInfo} />
+                </div>
+                <div className={classes.infoTextDiv}>
+                    <h5 className={classes.headerTextStyle}>Автовишка</h5>
+
+                    <div className={classes.divHalfsHolder}>
+                        <div className={classes.divHalf}>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][1].workHeight}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Височина:
+                                {text[lang][1].horizontalObseg}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Дължина:
+                                {text[lang][1].weightMax}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Скорост:
+                                {text[lang][1].platformSize}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Тегло:
+                                {text[lang][1].width}
+
+                            </p>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][1].height}
+
+                            </p>
+                            <p className={classes.headerPtagStyle}>
+                                {text[lang][1].length}
                             </p>
                         </div>
                         <div style={{ textAlign: "left" }} className={classes.divHalf}>
@@ -66,109 +179,22 @@ const InfoComponent = (compNum) => {
                             <p className={classes.headerPtagStyled}>
                                 5.80м
                             </p>
-                            <p className={classes.headerPtagStyled}>
-                                6.37км/ч
-                            </p>
-                            <p className={classes.headerPtagStyled}>
-                                5900кг
-                            </p>
-
                         </div>
                     </div>
                     <div className={classes.divHalfsHolder}>
 
+                        <p className={classes.headerPtagStyle}>
+                            {text[lang][1].hourlyCharge}
+                        </p>
                         <div className={classes.divPrices}>
-                            <p className={classes.priceText}>Цена на ден:</p>
-                            <p className={classes.priceText}>Цена за уикенд:</p>
-                            <p className={classes.priceText}>Цена на ден за седмица:</p>
-                            <p className={classes.priceText}>Цена на ден за месец:</p>
+                            <p className={classes.priceTextRight}> 50 лв.</p>
                         </div>
-                        <div className={classes.divPrices}>
-                            <p className={classes.priceTextRight}> 100лв</p>
-                            <p className={classes.priceTextRight}> 150лв</p>
-                            <p className={classes.priceTextRight}> 90лв</p>
-                            <p className={classes.priceTextRight}> 70лв</p>
-                        </div>
+
                     </div>
+                    <p className={classes.longText}>{text[lang][0].longPeriodRent}</p>
 
                 </div>
             </div>
-        )
-    } else if (compNum.props === 2) {
-        return (
-            <div className={classes.mainInfoDiv}>
-            <div className={classes.imageFrame}>
-                <img src={imageInfo2} className={classes.imageStyleInfo} />
-            </div>
-            <div className={classes.infoTextDiv}>
-                <h5 className={classes.headerTextStyle}>Автовишка</h5>
-
-                <div className={classes.divHalfsHolder}>
-                    <div className={classes.divHalf}>
-
-                        <p className={classes.headerPtagStyle}>
-                            Работна височина:
-                        </p>
-                        <p className={classes.headerPtagStyle}>
-                            Хоризонтален обсег:
-                        </p>
-                        <p className={classes.headerPtagStyle}>
-                            Товароподемност:
-                        </p>
-                        <p className={classes.headerPtagStyle}>
-                            Размери на платформата:
-                        </p>
-                        <p className={classes.headerPtagStyle}>
-                            Ширина:
-                        </p>
-                        <p className={classes.headerPtagStyle}>
-                            Височина:
-                        </p>
-                        <p className={classes.headerPtagStyle}>
-                            Дължина:
-                        </p>
-                    </div>
-                    <div style={{ textAlign: "left" }} className={classes.divHalf}>
-                        <p className={classes.headerPtagStyled}>
-                            15.7м
-                        </p>
-
-                        <p className={classes.headerPtagStyled}>
-                            6.91м
-                        </p>
-                        <p className={classes.headerPtagStyled}>
-                            230кг
-                        </p>
-                        <p className={classes.headerPtagStyled}>
-                            1.83 х 0.91м
-                        </p>
-                        <p className={classes.headerPtagStyled}>
-                            1.80м
-                        </p>
-                        <p className={classes.headerPtagStyled}>
-                            2.20м
-                        </p>
-                        <p className={classes.headerPtagStyled}>
-                            5.80м
-                        </p>
-                    </div>
-                </div>
-                <div className={classes.divHalfsHolder}>
-
-                    <div className={classes.divPrices}>
-                        <p className={classes.priceText}>Цена на час:</p>
-
-                    </div>
-                    <div className={classes.divPrices}>
-                        <p className={classes.priceTextRight}> 50лв</p>
-                    </div>
-                    
-                </div>
-                        <p className={classes.longText}>При наемане за по-дълъг период от време, цената се договаря.</p>
-                        <p className={classes.longText}>В цената е включен оператор на машината.</p>
-
-            </div>
-        </div>
         )
     } else if (compNum.props === 3) {
         return (
@@ -181,33 +207,32 @@ const InfoComponent = (compNum) => {
 
                     <div className={classes.divHalfsHolder}>
                         <div className={classes.divHalf}>
-
                             <p className={classes.headerPtagStyle}>
-                                Работна височина:
+                                {text[lang][2].workHeight}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Товароподемност:
+                                {text[lang][2].weightMax}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Размери на платформата:
+                                {text[lang][2].platformSize}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Удължение на платформата:
+                                {text[lang][2].platformExtention}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Ширина:
+                                {text[lang][2].width}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Височина:
+                                {text[lang][2].height}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Дължина:
+                                {text[lang][2].length}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Скорост:
+                                {text[lang][2].speed}
                             </p>
                             <p className={classes.headerPtagStyle}>
-                                Тегло:
+                                {text[lang][2].weight}
                             </p>
                         </div>
                         <div style={{ textAlign: "left" }} className={classes.divHalf}>
@@ -224,19 +249,19 @@ const InfoComponent = (compNum) => {
                                 0.92м
                             </p>
                             <p className={classes.headerPtagStyled}>
-                               
+
                             </p>
                             <p className={classes.headerPtagStyled}>
-                              
+
                             </p>
                             <p className={classes.headerPtagStyled}>
-                               
+
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                
+
                             </p>
                             <p className={classes.headerPtagStyled}>
-                                
+
                             </p>
 
                         </div>
@@ -244,19 +269,19 @@ const InfoComponent = (compNum) => {
                     <div className={classes.divHalfsHolder}>
 
                         <div className={classes.divPrices}>
-                            <p className={classes.priceText}>Цена на ден:</p>
-                            <p className={classes.priceText}>Цена за уикенд:</p>
-                            <p className={classes.priceText}>Цена на ден за седмица:</p>
-                            <p className={classes.priceText}>Цена на ден за месец:</p>
+                            <p className={classes.priceText}>{text[lang][2].pricePerDay}</p>
+                            <p className={classes.priceText}>{text[lang][2].pricePerWeekend}</p>
+                            <p className={classes.priceText}>{text[lang][2].pricePerDayPerWeek}</p>
+                            <p className={classes.priceText}>{text[lang][2].pricePerDayPerMonth}</p>
                             <br></br>
                             <br></br>
                             <br></br>
                         </div>
                         <div className={classes.divPrices}>
-                            <p className={classes.priceTextRight}> 60лв</p>
-                            <p className={classes.priceTextRight}> 90лв</p>
-                            <p className={classes.priceTextRight}> 55лв</p>
-                            <p className={classes.priceTextRight}> 40лв</p>
+                            <p className={classes.priceTextRight}> 60 лв.</p>
+                            <p className={classes.priceTextRight}> 90 лв.</p>
+                            <p className={classes.priceTextRight}> 55 лв.</p>
+                            <p className={classes.priceTextRight}> 40 лв.</p>
                         </div>
                     </div>
 

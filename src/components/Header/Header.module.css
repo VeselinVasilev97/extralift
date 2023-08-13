@@ -8,6 +8,7 @@
   height: 85vh;
   user-select: none;
   background-image: url('../../assets/Background.png');
+  /* background-image: url('../../assets/shano.jpg'); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -35,7 +36,6 @@ body{
   width: 200px;
   height: 40px;
   background-color: #a70f10;
-  margin-right: 20px;
 }
 .phoneText {
   color: white;
