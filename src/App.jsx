@@ -110,7 +110,7 @@ function App() {
               </Fancybox>
             </div>
           </div>
-          <div style={{ marginTop: "100px" }} className="row ">
+          <div style={{ marginTop: "100px" }} className={classes.row}>
             <Footer languageProp={switchOnOff} />
           </div>
         </div>

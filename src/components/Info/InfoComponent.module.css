@@ -1,148 +1,153 @@
 .mainInfoDiv {
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
 }
 
 .imageFrame {
-    height: 100%;
-    width: 45%;
-    border-radius: 10px;
+  height: 100%;
+  width: 45%;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .imageStyleInfo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+  transform: scale(1);
+  transition: 0.6s ease-in-out;
+}
+.imageStyleInfo:hover {
+  transform: scale(1.1);
 }
 
-
 .infoTextDiv {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    /* background-color: rgb(235, 235, 235); */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(235, 235, 235); */
 }
 
 .headerTextStyle {
-    font-size: 30px;
-    font-weight: 300;
-    padding: 15px;
-    text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 15px;
+  text-align: center;
 }
 
 .headerPtagStyle {
-    width: 100%;
-    height: 30px;
-    text-align: right;
-    display: flex;
-    align-items: center;
-    justify-content: right;
+  width: 100%;
+  height: 30px;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }
 
 .headerPtagStyled {
-    width: 100%;
-    height: 30px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    color: #a70f10;
-    font-weight: bold;
+  width: 100%;
+  height: 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #a70f10;
+  font-weight: bold;
 }
 
 .divHalfsHolder {
-    width: 100%;
-    display: flex;
-    border-top:1px solid rgb(231, 231, 231)
+  width: 100%;
+  display: flex;
+  border-top: 1px solid rgb(231, 231, 231);
 }
 
 .divPrices {
-    width: 100%;
+  width: 100%;
 }
-.longText{
-    font-size: 15px;
-    text-align: center;
-    padding: 0px 20px;
+.longText {
+  font-size: 15px;
+  text-align: center;
+  padding: 0px 20px;
 }
 
 .divHalf {
-    width: 50%;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 5px;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 5px;
 }
 
 .priceText {
-    height: 30px;
-    font-size: 18px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    text-align: right;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: right;
 }
 
 .priceTextRight {
-    height: 30px;
-    font-size: 18px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: left;
-    color:rgb(37, 37, 37);
-    font-weight: bold;
+  height: 30px;
+  font-size: 18px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  color: rgb(37, 37, 37);
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 480px) {
-    .imageFrame {
-        width: 100%;
-    }
+  .imageFrame {
+    width: 100%;
+  }
 
-    .imageStyleInfo {
-        border-radius: 0;
-    }
+  .imageStyleInfo {
+    border-radius: 0;
+  }
 
-    .infoTextDiv {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* background-color: red; */
-    }
+  .infoTextDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+  }
 
-    .headerTextStyle {
-        text-align: center;
-        font-size: 25px;
-        height: 15%;
-    }
+  .headerTextStyle {
+    text-align: center;
+    font-size: 25px;
+    height: 15%;
+  }
 
-    .headerPtagStyle {
-        font-size: 13px;
-        line-height: 12px;
-    }
+  .headerPtagStyle {
+    font-size: 13px;
+    line-height: 12px;
+  }
 
-    .mainInfoDiv {
-        flex-direction: column;
-    }
+  .mainInfoDiv {
+    flex-direction: column;
+  }
 
-    .priceText,
-    .priceTextRight {
-        font-size: 13px;
-    }
-    .longText{
-        font-size: 10px;
-        padding: 0px 20px;
-    }
+  .priceText,
+  .priceTextRight {
+    font-size: 13px;
+  }
+  .longText {
+    font-size: 10px;
+    padding: 0px 20px;
+  }
 }
 @media only screen and (max-width: 1000px) {
-    .priceText{
-        font-size: 12px;
-    }
-    .mainInfoDiv{
-        display: flex;
-        align-items: center;
-    }
-    .headerPtagStyle{
-        font-size: 13px;
-    }
+  .priceText {
+    font-size: 12px;
+  }
+  .mainInfoDiv {
+    display: flex;
+    align-items: center;
+  }
+  .headerPtagStyle {
+    font-size: 13px;
+  }
 }
