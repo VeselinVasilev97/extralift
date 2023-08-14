@@ -1,0 +1,15 @@
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* scroll effect properties */
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 150ms;
+  }
+  
+  .row.show {
+    transform: translateX(0);
+    opacity: 1;
+  }

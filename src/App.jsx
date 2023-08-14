@@ -12,90 +12,108 @@ import image9 from "./assets/nv4.jpg";
 import InfoComponent from "./components/Info/InfoComponent";
 import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
 import Footer from "./components/Footer/Footer";
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 import text from "./components/textLanguages/Language";
-
-
-
-
+import "./App.css";
 function App() {
-  const [switchOnOff,setSwitchOnOff] = useState(true);
-    const [langFlag, setLangFlag] = useState(true)
-    const [lang, setLang] = useState('БГ');
+  const [switchOnOff, setSwitchOnOff] = useState(true);
+  const [langFlag, setLangFlag] = useState(true);
+  const [lang, setLang] = useState("БГ");
 
+  //scroll effect
+  useEffect(() => {
+    const components = document.querySelectorAll(".row");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("show", entry.isIntersecting);
+      });
+    });
+    components.forEach((components) => {
+      observer.observe(components);
+    });
+  }, []);
 
-    
+  //scroll effect
+
   useEffect(() => {
     if (langFlag) {
-        setLang('БГ')
+      setLang("БГ");
     } else {
-        setLang('EN')
+      setLang("EN");
     }
-}, [langFlag])
-    return (
+  }, [langFlag]);
+  return (
     <>
-    {switchOnOff ? <div className={classes.architecture}>
-        <Nav changeLang={setLangFlag} />
-        <div className={classes.row}>
-          <Header languageProp={langFlag} />
-        </div>
-        <div className={classes.row}>
-          <InfoComponent languageProp={langFlag} props={1}/>
-        </div>
-        <div  style={{marginTop:'100px'}} className={classes.row}>
-          <InfoComponent languageProp={langFlag} props={2}/>
-        </div>
-        <div  style={{marginTop:'100px'}} className={classes.row}>
-          <InfoComponent languageProp={langFlag} props={3}/>
-        </div>
-        <div style={{marginTop:'100px'}} className={classes.row}>
-          <AccordionSection languageProp={langFlag} />
-        </div>
-        <div style={{marginTop:'100px'}} className={classes.row}>
-          <div className={classes.centeredDiv}>
-          <h1 style={{fontWeight:"300",textAlign:"center",height:'100px'}}>{text[lang][0].gellery}</h1>
-            <Fancybox
-            languageProp={langFlag}
-              options={{
-                Carousel: {
-                  infinite: true,
-                },
-              }}
-            >
-              <a data-fancybox="gallery" href={image1}>
-                <img src={image1} className={classes.imageStyle} />
-              </a>
-              <a data-fancybox="gallery" href={image2}>
-                <img src={image2} className={classes.imageStyle} />
-              </a>
-              <a data-fancybox="gallery" href={image3}>
-                <img src={image3} className={classes.imageStyle} />
-              </a>
-              <a data-fancybox="gallery" href={image4}>
-                <img src={image4} className={classes.imageStyle} />
-              </a>
-              <a data-fancybox="gallery" href={image5}>
-                <img src={image5} className={classes.imageStyle} />
-              </a>
-              <a data-fancybox="gallery" href={image8}>
-                <img src={image8} className={classes.imageStyle} />
-              </a>
-              <a data-fancybox="gallery" href={image5}>
-                <img src={image5} className={classes.imageStyle} />
-              </a>
-            </Fancybox>
+      {switchOnOff ? (
+        <div className={classes.architecture}>
+          <Nav changeLang={setLangFlag} />
+          <div className="row show" /* className={classes[`row show`]} */>
+            <Header languageProp={langFlag} />
+          </div>
+          <div className="row">
+            <InfoComponent languageProp={langFlag} props={1} />
+          </div>
+          <div style={{ marginTop: "100px" }} className="row">
+            <InfoComponent languageProp={langFlag} props={2} />
+          </div>
+          <div style={{ marginTop: "100px" }} className="row ">
+            <InfoComponent languageProp={langFlag} props={3} />
+          </div>
+          <div style={{ marginTop: "100px" }} className="row ">
+            <AccordionSection languageProp={langFlag} />
+          </div>
+          <div style={{ marginTop: "100px" }} className="row ">
+            <div className={classes.centeredDiv}>
+              <h1
+                style={{
+                  fontWeight: "300",
+                  textAlign: "center",
+                  height: "100px",
+                }}
+              >
+                {text[lang][0].gellery}
+              </h1>
+              <Fancybox
+                languageProp={langFlag}
+                options={{
+                  Carousel: {
+                    infinite: true,
+                  },
+                }}
+              >
+                <a data-fancybox="gallery" href={image1}>
+                  <img src={image1} className={classes.imageStyle} />
+                </a>
+                <a data-fancybox="gallery" href={image2}>
+                  <img src={image2} className={classes.imageStyle} />
+                </a>
+                <a data-fancybox="gallery" href={image3}>
+                  <img src={image3} className={classes.imageStyle} />
+                </a>
+                <a data-fancybox="gallery" href={image4}>
+                  <img src={image4} className={classes.imageStyle} />
+                </a>
+                <a data-fancybox="gallery" href={image5}>
+                  <img src={image5} className={classes.imageStyle} />
+                </a>
+                <a data-fancybox="gallery" href={image8}>
+                  <img src={image8} className={classes.imageStyle} />
+                </a>
+                <a data-fancybox="gallery" href={image5}>
+                  <img src={image5} className={classes.imageStyle} />
+                </a>
+              </Fancybox>
+            </div>
+          </div>
+          <div style={{ marginTop: "100px" }} className="row ">
+            <Footer languageProp={switchOnOff} />
           </div>
         </div>
-        <div style={{marginTop:'100px'}} className={classes.row}>
-          <Footer languageProp={switchOnOff} />
+      ) : (
+        <div className={classes.maintenance}>
+          <p>WEBSITE IS UNDER MAINTENANCE</p>
         </div>
-      </div>
-      :
-      <div className={classes.maintenance}>
-      <p>WEBSITE IS UNDER MAINTENANCE</p>
-      </div>
-      }
-      
+      )}
     </>
   );
 }
