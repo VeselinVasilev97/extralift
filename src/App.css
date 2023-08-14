@@ -6,7 +6,7 @@
     /* scroll effect properties */
     transform: translateY(100px);
     opacity: 0;
-    transition: 150ms;
+    transition: 850ms;
   }
   
   .row.show {

@@ -31,6 +31,7 @@ function App() {
     },{
       //задаваме го на 1 за да се изпълни ефекта когато компонента е 100 процента видим (между 0 и 1 са допустимите стойности)
       /* threshold: .5 */
+      rootMargin: "-100px"
     });
     components.forEach((components) => {
       observer.observe(components);
@@ -51,7 +52,7 @@ function App() {
       {switchOnOff ? (
         <div className={classes.architecture}>
           <Nav changeLang={setLangFlag} />
-          <div className="row show" /* className={classes[`row show`]} */>
+          <div className={classes.row} /* className={classes[`row show`]} */>
             <Header languageProp={langFlag} />
           </div>
           <div className="row">

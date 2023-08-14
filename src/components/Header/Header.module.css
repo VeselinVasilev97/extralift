@@ -23,12 +23,24 @@
 
 .phoneButton {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   border-radius: 10px;
   align-items: center;
   width: 200px;
   height: 40px;
   background-color: #a70f10;
+  margin-top: 1rem;
+  cursor: pointer;
+}.phoneButton:hover {
+  background-color: rgb(119, 0, 0);
+
+}
+
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
 }
 
 .phoneText {
