@@ -86,6 +86,8 @@ function App() {
                   },
                 }}
               >
+                <div className={classes.galleryContainer}>
+
                 <a data-fancybox="gallery" href={image1}>
                   <img src={image1} className={classes.imageStyle} />
                 </a>
@@ -107,6 +109,7 @@ function App() {
                 <a data-fancybox="gallery" href={image5}>
                   <img src={image5} className={classes.imageStyle} />
                 </a>
+                </div>
               </Fancybox>
             </div>
           </div>

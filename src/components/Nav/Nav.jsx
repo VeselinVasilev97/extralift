@@ -28,12 +28,10 @@ const Nav = (props) => {
         <div className={classes.logoDiv} />
         <div className={classes.btnsHolder}>
           <div className={classes.phoneButton}>
-            <div className={classes.buttonContainer}>
+            <a className={classes.phoneText} href="tel:+359878018282">
               <PhoneIcon sx={{ color: "white" }} />
-              <a className={classes.phoneText} href="tel:+359878018282">
-                0878018282
-              </a>
-            </div>
+              0878018282
+            </a>
           </div>
           <div className={classes.langBtnHolder}>
             {langFlag ? (

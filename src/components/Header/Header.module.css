@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: .7rem;
   width: 100%;
   background-color: rgba(214, 10, 10, 0);
   height: 85vh;
@@ -29,7 +30,6 @@
   width: 200px;
   height: 40px;
   background-color: #a70f10;
-  margin-top: 1rem;
   cursor: pointer;
 }.phoneButton:hover {
   background-color: rgb(119, 0, 0);
@@ -54,7 +54,9 @@
 }
 
 @media only screen and (max-width: 480px) {
-
+  .header{
+  gap: 0;
+  }
 
   .heading {
     font-size: 2rem;

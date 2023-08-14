@@ -15,8 +15,8 @@ const text = {
             pricePerWeekend:"Weekend days rent:",
             pricePerDayPerWeek:"Daily price for weekly rent:",
             pricePerDayPerMonth:"Daily price for monthly rent:",
-            rentAliftCar:"Rent-a-lift",
-            varnaAndDobrich:"We provide service in Dobrich and Varna city without a day off",
+            rentAliftCar:"Rent a lift",
+            varnaAndDobrich:"We provide service in Dobrich city without a day off",
             longPeriodRent:"If you rent a lift for a longer period of time, price is negotionable. Lift operator is provided.",
             faq:"FAQ",
             gellery:"Gallery",
@@ -27,7 +27,6 @@ const text = {
             faq2:"Delivery",
             faq2Answer:"We can provide transport and delivery to the desired location. This is not included in the price. Alternatively, you can arrange the transport on your own.",
             faq3:"What can you do with a lift?",
-            faq4:"When and why to use scissor lift?",
             option1:"window cleaning",
             option2:"cutting and trimming tree branches",
             option3:"maintenance and facade cleaning",
@@ -37,6 +36,8 @@ const text = {
             option7:"gutters mounting, dismounting and cleaning",
             option8:"billboard mounting and dismounting",
             option9:"house insolation installations",
+            faq4:"When and why to use scissor lift?",
+            faq4Answer:"Electric scissor lift are lightest type of aerial work platforms. They perform best in inventory management projects in warehouses with even flooring. Electric scissor lifts are lightweigth and compact, usually accommodating up to 2 people and additionally up to to 360 kg. load. This makes these lifts suitable for smaller warehouses where heavy lifting is not required. Typiccally this is the most cost-effective option when you are trying to avoid the use of stairs and scaffolding.            Electric scissor lifts are suitable for: When you want to reduce the cost and increase the efficiency in your warehouse inventory management processes. Indoors, in enclosed spaces, requiring low clearance and minimum emissions. In projects with light, vertical lifting of even surfaces."
         },
         1: {
             workHeight: "Work height:",
@@ -81,8 +82,8 @@ const text = {
             pricePerWeekend:"Цена за уикенд:",
             pricePerDayPerWeek:"Цена на ден за седмица:",
             pricePerDayPerMonth:"Цена на ден за месец:",
-            rentAliftCar:"Автовишки под наем",
-            varnaAndDobrich:"Обслужваме Варна и Добрич без почивен ден",
+            rentAliftCar:"Вишки под наем",
+            varnaAndDobrich:"Обслужваме Добрич без почивен ден",
             longPeriodRent:"При наемане за по-дълъг период от време, цената се договаря.В цената е включен оператор на машината.",
             faq:"Полезна информация",
             gellery:"Галерия",
@@ -93,7 +94,6 @@ const text = {
             faq2:"Доставка до обект",
             faq2Answer:"Разполагаме със собствен транспорт за доставка на машините, транспортът не е включен в цената, при желание и възможност на клиента, той сам може да организира транспорта на машината.",
             faq3:"За какво може да бъде използвана автовишка?",
-            faq4:"Кога трябва да използваме ножична вишка?",
             option1:"почистване на стъкла",
             option2:"кастрене и рязане на клони",
             option3:"ремонт и почистване на фасади",
@@ -103,6 +103,9 @@ const text = {
             option7:"монтаж и демонтаж да улуци",
             option8:"изграждане на рекламни билборди",
             option9:"изграждане на изолации",
+            faq4:"Кога трябва да използваме ножична вишка?",
+            faq4Answer:"Електрическите ножични вишки са най-лекия вид работни платформи, които работят най-добре при проекти за управление на инвентара и събиране на запаси в склад с равномерна повърхност на настилката. Електрическите ножични вишки са леки и компактни, обикновено побират до 2-ма души + товар до 360кг. Това означава, че тези машини работят добре за по-малки складове, в които не се изисква повдигане на тежък товар. Това обикновено е най-евтиният вариант, когато трябва да изключите използването на стълби и скелета.Електрическите ножични вишки са подходящи:"
+            
         },
         1: {
             workHeight: "Работна височина:",

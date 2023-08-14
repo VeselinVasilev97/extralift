@@ -24,21 +24,23 @@ body {
 .centeredDiv {
   width: 80%;
 }
+.galleryContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 19rem));
+  gap: 2rem;
+  justify-content: center;
+}
 
 .imageStyle {
-  width: 33.33%;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   object-fit: cover;
 }
 
 @media only screen and (max-width: 480px) {
   .centeredDiv {
     width: 100%;
-  }
-
-  .imageStyle {
-    width: 50%;
-    height: 250px;
   }
 }
 

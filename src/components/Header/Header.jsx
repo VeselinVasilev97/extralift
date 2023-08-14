@@ -21,12 +21,12 @@ const Header = (props) => {
       <h2 className={classes.subheading}>Extralift</h2>
       <p className={classes.description}>{text[lang][0].varnaAndDobrich}</p>
       <div className={classes.phoneButton}>
-        <div className={classes.buttonContainer}>
-          <PhoneIcon sx={{ color: "white" }} />
-          <a className={classes.phoneText} href="tel:+359878018282">
-            0878018282
-          </a>
-        </div>
+      <div className={classes.phoneButton}>
+            <a className={classes.phoneText} href="tel:+359878018282">
+              <PhoneIcon sx={{ color: "white" }} />
+              0878018282
+            </a>
+          </div>
       </div>
     </div>
   );
