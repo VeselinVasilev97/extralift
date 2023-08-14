@@ -25,8 +25,12 @@ function App() {
     const components = document.querySelectorAll(".row");
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        entry.target.classList.toggle("show", entry.isIntersecting);
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        if(entry.isIntersecting) observer.unobserve(entry.target)
       });
+    },{
+      //задаваме го на 1 за да се изпълни ефекта когато компонента е 100 процента видим (между 0 и 1 са допустимите стойности)
+      /* threshold: .5 */
     });
     components.forEach((components) => {
       observer.observe(components);
