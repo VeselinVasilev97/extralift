@@ -12,27 +12,30 @@ import image9 from "./assets/nv4.jpg";
 import InfoComponent from "./components/Info/InfoComponent";
 import AccordionSection from "./components/Accordion/AccordionSection/AccordionSection";
 import Footer from "./components/Footer/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import text from "./components/textLanguages/Language";
 import "./App.css";
 function App() {
   const [switchOnOff, setSwitchOnOff] = useState(true);
   const [langFlag, setLangFlag] = useState(true);
   const [lang, setLang] = useState("БГ");
-
+  const ref = useRef(null);
   //scroll effect
   useEffect(() => {
     const components = document.querySelectorAll(".row");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        entry.target.classList.toggle("show", entry.isIntersecting)
-        if(entry.isIntersecting) observer.unobserve(entry.target)
-      });
-    },{
-      //задаваме го на 1 за да се изпълни ефекта когато компонента е 100 процента видим (между 0 и 1 са допустимите стойности)
-      /* threshold: .5 */
-      rootMargin: "-100px"
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          entry.target.classList.toggle("show", entry.isIntersecting);
+          if (entry.isIntersecting) observer.unobserve(entry.target);
+        });
+      },
+      {
+        //задаваме го на 1 за да се изпълни ефекта когато компонента е 100 процента видим (между 0 и 1 са допустимите стойности)
+        /* threshold: .5 */
+        rootMargin: "-100px",
+      }
+    );
     components.forEach((components) => {
       observer.observe(components);
     });
@@ -47,15 +50,21 @@ function App() {
       setLang("EN");
     }
   }, [langFlag]);
+
+  const scrollFunc = () => {
+    console.log("func running");
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+
   return (
     <>
       {switchOnOff ? (
         <div className={classes.architecture}>
           <Nav changeLang={setLangFlag} />
           <div className={classes.row} /* className={classes[`row show`]} */>
-            <Header languageProp={langFlag} />
+            <Header onClick={scrollFunc} languageProp={langFlag} />
           </div>
-          <div className="row">
+          <div ref={ref} className="row">
             <InfoComponent languageProp={langFlag} props={1} />
           </div>
           <div style={{ marginTop: "100px" }} className="row">
@@ -87,28 +96,27 @@ function App() {
                 }}
               >
                 <div className={classes.galleryContainer}>
-
-                <a data-fancybox="gallery" href={image1}>
-                  <img src={image1} className={classes.imageStyle} />
-                </a>
-                <a data-fancybox="gallery" href={image2}>
-                  <img src={image2} className={classes.imageStyle} />
-                </a>
-                <a data-fancybox="gallery" href={image3}>
-                  <img src={image3} className={classes.imageStyle} />
-                </a>
-                <a data-fancybox="gallery" href={image4}>
-                  <img src={image4} className={classes.imageStyle} />
-                </a>
-                <a data-fancybox="gallery" href={image5}>
-                  <img src={image5} className={classes.imageStyle} />
-                </a>
-                <a data-fancybox="gallery" href={image8}>
-                  <img src={image8} className={classes.imageStyle} />
-                </a>
-                <a data-fancybox="gallery" href={image5}>
-                  <img src={image5} className={classes.imageStyle} />
-                </a>
+                  <a data-fancybox="gallery" href={image1}>
+                    <img src={image1} className={classes.imageStyle} />
+                  </a>
+                  <a data-fancybox="gallery" href={image2}>
+                    <img src={image2} className={classes.imageStyle} />
+                  </a>
+                  <a data-fancybox="gallery" href={image3}>
+                    <img src={image3} className={classes.imageStyle} />
+                  </a>
+                  <a data-fancybox="gallery" href={image4}>
+                    <img src={image4} className={classes.imageStyle} />
+                  </a>
+                  <a data-fancybox="gallery" href={image5}>
+                    <img src={image5} className={classes.imageStyle} />
+                  </a>
+                  <a data-fancybox="gallery" href={image8}>
+                    <img src={image8} className={classes.imageStyle} />
+                  </a>
+                  <a data-fancybox="gallery" href={image5}>
+                    <img src={image5} className={classes.imageStyle} />
+                  </a>
                 </div>
               </Fancybox>
             </div>

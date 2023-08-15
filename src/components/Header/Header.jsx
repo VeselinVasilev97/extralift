@@ -28,6 +28,9 @@ const Header = (props) => {
             </a>
           </div>
       </div>
+      <div>
+        <button onClick={props.onClick} className={classes.scrollBtn}>Scroll</button>
+      </div>
     </div>
   );
 };
