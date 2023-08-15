@@ -15,12 +15,10 @@ export default function BasicAccordion(props) {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>{text[props.language][0].faq1}</Typography>
+          <p>{text[props.language][0].faq1}</p>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-
-          </Typography>
+          <p></p>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -29,14 +27,10 @@ export default function BasicAccordion(props) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>
-          {text[props.language][0].faq2}
-          </Typography>
+          <p>{text[props.language][0].faq2}</p>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-            {text[props.language][0].faq2Answer}
-          </Typography>
+          <p>{text[props.language][0].faq2Answer}</p>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -45,12 +39,10 @@ export default function BasicAccordion(props) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>
-          {text[props.language][0].faq3}
-          </Typography>
+          <p>{text[props.language][0].faq3}</p>
         </AccordionSummary>
         <AccordionDetails>
-          <ul style={{ padding: '0px 20px' }}>
+          <ul style={{ padding: "0px 20px" }}>
             <li>{text[props.language][0].option1}</li>
             <li>{text[props.language][0].option2}</li>
             <li>{text[props.language][0].option3}</li>
@@ -69,14 +61,10 @@ export default function BasicAccordion(props) {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>
-          {text[props.language][0].faq4}
-          </Typography>
+          <p>{text[props.language][0].faq4}</p>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>
-          {text[props.language][0].faq4Answer}
-          </Typography>
+          <p>{text[props.language][0].faq4Answer}</p>
         </AccordionDetails>
       </Accordion>
       {/* <Accordion>
