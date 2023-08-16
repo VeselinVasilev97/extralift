@@ -58,12 +58,15 @@
   padding: 10px;
   display: flex;
 }
+.icon:hover {
+  transform: scale(1.1);
+}
 
 .footerHeading {
-    font-weight: 100;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    color: #fff;
-    text-align: center;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #fff;
+  text-align: center;
 }
