@@ -52,7 +52,6 @@ function App() {
   }, [langFlag]);
 
   const scrollFunc = () => {
-    console.log("func running");
     ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 

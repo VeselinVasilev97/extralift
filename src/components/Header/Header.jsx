@@ -3,7 +3,7 @@ import classes from "./Header.module.css";
 import text from "../textLanguages/Language";
 import { useEffect, useState } from "react";
 import PhoneIcon from "@mui/icons-material/Phone";
-
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const Header = (props) => {
   const [lang, setLang] = useState("БГ");
 
@@ -18,18 +18,20 @@ const Header = (props) => {
   return (
     <div className={classes.header}>
       <h1 className={classes.heading}>{text[lang][0].rentAliftCar}</h1>
-      <h2 className={classes.subheading}>Extralift</h2>
-      <p className={classes.description}>{text[lang][0].varnaAndDobrich}</p>
-      <div className={classes.phoneButton}>
-      <div className={classes.phoneButton}>
-            <a className={classes.phoneText} href="tel:+359878018282">
-              <PhoneIcon sx={{ color: "white" }} />
-              0878018282
-            </a>
-          </div>
+      <h2 className={classes.subheading}>Вишки под наем</h2>
+      <div style={{display: "flex", flexDirection: "column", gap: "2rem", justifyContent: "center", alignItems: "center"}}>
+        <p className={classes.description}>{text[lang][0].varnaAndDobrich}</p>
+        <div className={classes.phoneButton}>
+          <a className={classes.phoneText} href="tel:+359878018282">
+            <PhoneIcon sx={{ color: "white" }} />
+            0878018282
+          </a>
+        </div>
       </div>
       <div>
-        <button onClick={props.onClick} className={classes.scrollBtn}>Scroll</button>
+        <button onClick={props.onClick} className={classes.scrollBtn}>
+          <ExpandMoreIcon fontSize="large" />
+        </button>
       </div>
     </div>
   );
