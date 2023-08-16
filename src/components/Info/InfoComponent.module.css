@@ -49,16 +49,7 @@
   text-align: right;
 }
 
-.headerPtagStyled {
-  width: 100%;
-  height: 30px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  color: #a70f10;
-  font-weight: bold;
-}
+
 
 .divHalfsHolder {
   width: 100%;
@@ -89,8 +80,18 @@
   align-items: center;
   text-align: right;
 }
-
 .priceTextRight {
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  color: #a70f10;
+  font-weight: bold;
+}
+.headerPtagStyled {
   height: 30px;
   font-size: 18px;
   display: flex;
@@ -128,14 +129,17 @@
     font-size: 13px;
     line-height: 12px;
   }
+  .headerPtagStyled{
+    font-size: 15px;
+
+  }
 
   .mainInfoDiv {
     flex-direction: column;
   }
 
-  .priceText,
   .priceTextRight {
-    font-size: 13px;
+    font-size: 15px;
   }
   .longText {
     font-size: 10px;
@@ -151,6 +155,6 @@
     align-items: center;
   }
   .headerPtagStyle {
-    font-size: 13px;
+    font-size: 14px;
   }
 }

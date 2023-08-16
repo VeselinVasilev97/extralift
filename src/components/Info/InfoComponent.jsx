@@ -219,7 +219,7 @@ const InfoComponent = (compNum) => {
                             <p className={classes.headerPtagStyle}>
                                 {text[lang][2].platformExtention}
                             </p>
-                            <p className={classes.headerPtagStyle}>
+                            {/* <p className={classes.headerPtagStyle}>
                                 {text[lang][2].width}
                             </p>
                             <p className={classes.headerPtagStyle}>
@@ -233,7 +233,7 @@ const InfoComponent = (compNum) => {
                             </p>
                             <p className={classes.headerPtagStyle}>
                                 {text[lang][2].weight}
-                            </p>
+                            </p> */}
                         </div>
                         <div style={{ textAlign: "left" }} className={classes.divHalf}>
                             <p className={classes.headerPtagStyled}>
@@ -248,7 +248,7 @@ const InfoComponent = (compNum) => {
                             <p className={classes.headerPtagStyled}>
                                 0.92 м.
                             </p>
-                            <p className={classes.headerPtagStyled}>
+                            {/* <p className={classes.headerPtagStyled}>
 
                             </p>
                             <p className={classes.headerPtagStyled}>
@@ -262,7 +262,7 @@ const InfoComponent = (compNum) => {
                             </p>
                             <p className={classes.headerPtagStyled}>
 
-                            </p>
+                            </p> */}
 
                         </div>
                     </div>
