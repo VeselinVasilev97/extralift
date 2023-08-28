@@ -18,7 +18,7 @@ export default function BasicAccordion(props) {
           <p>{text[props.language][0].faq1}</p>
         </AccordionSummary>
         <AccordionDetails>
-          <p></p>
+          <p>{text[props.language][0].faq1Answer}</p>
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -65,6 +65,17 @@ export default function BasicAccordion(props) {
         </AccordionSummary>
         <AccordionDetails>
           <p>{text[props.language][0].faq4Answer}</p>
+          <ul style={{ padding: "0px 20px" }}>
+            <li>{text[props.language][0].option1}</li>
+            <li>{text[props.language][0].option2}</li>
+            <li>{text[props.language][0].option3}</li>
+            <li>{text[props.language][0].option4}</li>
+            <li>{text[props.language][0].option5}</li>
+            <li>{text[props.language][0].option6}</li>
+            <li>{text[props.language][0].option7}</li>
+            <li>{text[props.language][0].option8}</li>
+            <li>{text[props.language][0].option9}</li>
+          </ul>
         </AccordionDetails>
       </Accordion>
       {/* <Accordion>

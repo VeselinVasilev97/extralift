@@ -2,6 +2,7 @@ import classes from "./Footer.module.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { Email, Person } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -11,10 +12,10 @@ const Footer = () => {
           <FacebookIcon />
         </div>
         <div className={classes.icon}>
-          <InstagramIcon />
+          <Person/>
         </div>
         <div className={classes.icon}>
-          <LinkedInIcon />
+          <Email />
         </div>
       </div>
       <div className={classes.footerHeading}>

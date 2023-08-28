@@ -18,18 +18,18 @@ const Header = (props) => {
   return (
     <div className={classes.header}>
       <h1 className={classes.heading}>{text[lang][0].rentAliftCar}</h1>
-      <h2 className={classes.subheading}>Вишки под наем</h2>
+      <h2 className={classes.subheading}>{text[lang][0].vishkiPodNaem}</h2>
       <div style={{display: "flex", flexDirection: "column", gap: "2rem", justifyContent: "center", alignItems: "center"}}>
         <p className={classes.description}>{text[lang][0].varnaAndDobrich}</p>
         <div className={classes.phoneButton}>
           <a className={classes.phoneText} href="tel:+359878018282">
             <PhoneIcon sx={{ color: "white" }} />
-            0878018282
+            {text[lang][0].callUs}
           </a>
         </div>
       </div>
-      <div>
-        <button onClick={props.onClick} className={classes.scrollBtn}>
+      <div style={{userSelect:"none"}}>
+        <button style={{userSelect:"none"}} onClick={props.onClick} className={classes.scrollBtn}>
           <ExpandMoreIcon fontSize="large" />
         </button>
       </div>

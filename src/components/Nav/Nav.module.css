@@ -58,6 +58,7 @@
     width: 200px;
     height: 40px;
     background-color: #a70f10;
+    user-select: none;
 }
 
 .phoneButton:hover {

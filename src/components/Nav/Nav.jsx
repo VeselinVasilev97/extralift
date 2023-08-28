@@ -30,7 +30,7 @@ const Nav = (props) => {
           <div className={classes.phoneButton}>
             <a className={classes.phoneText} href="tel:+359878018282">
               <PhoneIcon sx={{ color: "white" }} />
-              0878018282
+              Обади се
             </a>
           </div>
           <div className={classes.langBtnHolder}>
