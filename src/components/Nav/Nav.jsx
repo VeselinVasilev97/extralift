@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import classes from "./Nav.module.css";
 import PhoneIcon from "@mui/icons-material/Phone";
+import text from "../textLanguages/Language";
 
 const Nav = (props) => {
   const [nav, setNav] = useState(false);
   const [langFlag, setLangFlag] = useState(true);
+  const [lang, setLang] = useState("БГ");
 
   const changeLanguage = () => {
     setLangFlag(!langFlag);
@@ -19,7 +21,11 @@ const Nav = (props) => {
   };
 
   useEffect(() => {
-    // console.log(langFlag)
+    if (langFlag) {
+      setLang("БГ");
+    } else {
+      setLang("EN");
+    }
   }, [langFlag]);
   window.addEventListener("scroll", activateNav);
   return (
@@ -28,10 +34,10 @@ const Nav = (props) => {
         <div className={classes.logoDiv} />
         <div className={classes.btnsHolder}>
           <div className={classes.phoneButton}>
-            <a className={classes.phoneText} href="tel:+359878018282">
-              <PhoneIcon sx={{ color: "white" }} />
-              Обади се
-            </a>
+          <a className={classes.phoneText} href="tel:+359878018282">
+            <PhoneIcon sx={{ color: "white" }} />
+            {text[lang][0].callUs}
+          </a>
           </div>
           <div className={classes.langBtnHolder}>
             {langFlag ? (

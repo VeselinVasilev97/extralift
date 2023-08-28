@@ -54,7 +54,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    width: 200px;
+    width: 170px;
     height: 40px;
     background-color: #a70f10;
     user-select: none;
@@ -97,6 +97,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
+    border:solid 1px rgb(194, 194, 194);
 }
 
 .langBtnEn {
@@ -113,7 +114,7 @@
 
 @media only screen and (max-width: 480px) {
     .logoDiv {
-        width: 100px
+        width: 150px
     }
     .phoneButton {
         width: 130px;

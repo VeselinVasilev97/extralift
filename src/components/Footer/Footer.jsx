@@ -1,7 +1,5 @@
 import classes from "./Footer.module.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { Email, Person } from "@mui/icons-material";
 
 const Footer = () => {
@@ -11,11 +9,13 @@ const Footer = () => {
         <div className={classes.icon}>
           <FacebookIcon />
         </div>
+        {/* <div className={classes.icon}>
+          <Person />
+        </div> */}
         <div className={classes.icon}>
-          <Person/>
-        </div>
-        <div className={classes.icon}>
-          <Email />
+          <a style={{color:'black'}} href="mailto:minchevemil21@gmail.com">
+            <Email />
+          </a>
         </div>
       </div>
       <div className={classes.footerHeading}>
