@@ -5,6 +5,7 @@
   align-items: center;
   gap: 0.7rem;
   width: 100%;
+  background: url('../../assets/acv1blurred.png');
   background-color: rgba(214, 10, 10, 0);
   height: 85vh;
   user-select: none;
