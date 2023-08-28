@@ -13,7 +13,7 @@ const Footer = () => {
           <Person />
         </div> */}
         <div className={classes.icon}>
-          <a style={{color:'black'}} href="mailto:minchevemil21@gmail.com">
+          <a style={{display: "flex", color:'black'}} href="mailto:minchevemil21@gmail.com">
             <Email />
           </a>
         </div>
