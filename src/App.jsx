@@ -109,13 +109,13 @@ function App() {
                     <img loading="lazy" src={image11} className={classes.imageStyle} />
                   </a>
                   <a data-fancybox="gallery" href={image4}>
-                    <img src={image4} className={classes.imageStyle} />
+                    <img loading="lazy" src={image4} className={classes.imageStyle} />
                   </a>
                   <a data-fancybox="gallery" href={image5}>
-                    <img src={image5} className={classes.imageStyle} />
+                    <img loading="lazy" src={image5} className={classes.imageStyle} />
                   </a>
                   <a data-fancybox="gallery" href={image3}>
-                    <img src={image3} className={classes.imageStyle} />
+                    <img loading="lazy" src={image3} className={classes.imageStyle} />
                   </a>
                 </div>
               </Fancybox>

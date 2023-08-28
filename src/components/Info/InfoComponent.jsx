@@ -20,7 +20,7 @@ const InfoComponent = (compNum) => {
         return (
             <div className={classes.mainInfoDiv}>
                 <div className={classes.imageFrame}>
-                    <img src={imageInfo1} className={classes.imageStyleInfo} />
+                    <img loading="lazy" src={imageInfo1} className={classes.imageStyleInfo} />
                 </div>
                 <div className={classes.infoTextDiv}>
                     <h5 className={classes.headerTextStyle}>{text[lang][0].boomLift} <span style={{ fontWeight: 'bold' }}>JLG 45</span></h5>
@@ -125,7 +125,7 @@ const InfoComponent = (compNum) => {
         return (
             <div className={classes.mainInfoDiv}>
                 <div className={classes.imageFrame}>
-                    <img src={imageInfo2} className={classes.imageStyleInfo} />
+                    <img loading="lazy" src={imageInfo2} className={classes.imageStyleInfo} />
                 </div>
                 <div className={classes.infoTextDiv}>
                     <h5 className={classes.headerTextStyle}>{text[lang][0].autoLift}</h5>
@@ -200,7 +200,7 @@ const InfoComponent = (compNum) => {
         return (
             <div className={classes.mainInfoDiv}>
                 <div className={classes.imageFrame}>
-                    <img src={imageInfo3} className={classes.imageStyleInfo} />
+                    <img loading="lazy" src={imageInfo3} className={classes.imageStyleInfo} />
                 </div>
                 <div className={classes.infoTextDiv}>
                     <h5 className={classes.headerTextStyle}>{text[lang][0].scissorsLift}<br></br>HOULOTTE COMPACT 12</h5>
