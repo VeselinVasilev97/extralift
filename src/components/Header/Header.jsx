@@ -30,7 +30,7 @@ const Header = (props) => {
       </div>
       <div style={{userSelect:"none"}}>
         <button style={{userSelect:"none"}} onClick={props.onClick} className={classes.scrollBtn}>
-          <ExpandMoreIcon fontSize="large" />
+          <ExpandMoreIcon fontSize="large"/>
         </button>
       </div>
     </div>
